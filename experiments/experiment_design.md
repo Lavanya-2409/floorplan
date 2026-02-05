@@ -50,3 +50,13 @@ The generated GREB outputs are evaluated qualitatively using the following crite
 - **Reproducibility**: Similar outputs across repeated runs with identical inputs.
 
 Geometric accuracy is intentionally excluded, as GREB encodes symbolic topology rather than metric geometry.
+
+### Model Scope and Limitations
+
+The experiments in this work were conducted using a single large language model and do not constitute a comparative evaluation across different LLM architectures. While the GREB compiler prompt is, in principle, model-agnostic, this study does not assess how differences in instruction-following behavior or output formatting across models might influence the stability or structure of the generated GREB representations.
+
+The effectiveness of the approach depends primarily on strict adherence to controlled language and syntactic constraints rather than on model-specific reasoning or visual understanding capabilities. As a result, reproducibility is demonstrated only within the selected prompt–model configuration, and cross-model reproducibility remains an open question for future work.
+
+Importantly, the primary limitation observed in the experiments stems from the absence of grounded visual–spatial understanding when processing floor plan images, rather than from the choice of language model itself. When explicit textual descriptions are provided, the LLM reliably functions as a semantic compiler; when images are used as input, perceptual ambiguity leads to hallucinated or inconsistent spatial interpretations that propagate into the formal representation.
+
+
